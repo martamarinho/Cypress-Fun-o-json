@@ -1,8 +1,15 @@
-Aqui temos um projeto com Cypress , organizado com pageObjets . 
-Ao usar esse padrão deixamos os testes organizados , com um padrão de facil entendimento . De acordo venha surgir necessidade de ajustes 
-podemos apenas mudar os dados no arquivo de page onde ficam localizados os elementos e no restante dos testes será atualizado, deixando assim 
-facil de dar as manutenções necessarias. 
-Visando manter a organização foi criada também uma pasta com arquivo json , que utilizamos para receber os valores de determinados preenchimento de dados 
-de acordo necessidade , ao implementar os imports das pastas no teste , chamamos o dado a ser preenchido no campo . 
-Usei o beforeach para organizar os testes , sabendo que desta forma a cada it , teste rodado preciso primeiro acessar a aplicação, o beforeach fara essa função de chama essas ações de repeticão ao iniciar cada teste.
-Espero que gostem desse tipo de organização! 
+# Projeto de Automação com Cypress
+
+Este projeto foi desenvolvido utilizando **Cypress** e organizado com o padrão **Page Objects**, que permite manter os testes mais organizados, reutilizáveis e de fácil manutenção.
+
+Ao utilizar esse padrão, centralizamos os seletores e as ações da aplicação nos arquivos da pasta **pages**. Dessa forma, caso algum elemento da interface seja alterado, basta atualizar o seletor em um único lugar, sem a necessidade de modificar todos os testes.
+
+Para manter uma boa organização, também foi criada uma pasta **fixtures**, contendo arquivos **JSON** responsáveis por armazenar dados utilizados durante a execução dos testes, como e-mails, senhas e outras informações necessárias para preenchimento dos formulários. Assim, basta importar o arquivo desejado e utilizar os dados conforme a necessidade de cada cenário.
+
+Outra prática adotada foi a utilização do **beforeEach()**, responsável por executar ações comuns antes de cada teste, como acessar a aplicação, configurar o ambiente e realizar etapas repetitivas. Isso reduz a duplicação de código e torna os testes mais limpos e fáceis de manter.
+
+Durante o desenvolvimento também foram identificados alguns comportamentos da própria aplicação, como cenários em que o carrinho já inicia com produtos previamente adicionados. Essas situações foram analisadas e documentadas para que não impactassem a confiabilidade da automação.
+
+O objetivo deste projeto foi aplicar boas práticas de automação de testes, utilizando uma estrutura organizada, reutilização de código, **Page Objects**, **Fixtures**, **Faker** para geração de dados dinâmicos e uma abordagem que facilite futuras manutenções.
+
+Espero que gostem do projeto! Sugestões e feedbacks são sempre bem-vindos.
